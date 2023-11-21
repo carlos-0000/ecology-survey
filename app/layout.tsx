@@ -10,7 +10,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <SoftwareProvider>
         <html lang="en">
           <head>
-            <title>Calidad de Software</title>
+            <title>Ecología</title>
           </head>
           <body>
             <UIShell content={children} />
