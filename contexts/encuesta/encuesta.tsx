@@ -75,10 +75,7 @@ type ContextType = {
         id: number;
         title: string;
         description: string;
-        recommendation25: string;
-        recommendation50: string;
-        recommendation75: string;
-        recommendation100: string;
+        recommendations: string[];
       }[];
     }[];
   };
@@ -580,18 +577,29 @@ const defaultContext: ContextType = {
     sections: [
       {
         id: 1,
-        title: 'algo',
+        title: 'saludable',
         description: 'algo',
         categories: [
           {
             id: 1,
-            title: 'Saludable',
+            title: 'azucar',
             description:
               'Esta sección evalúa tus hábitos de hidratación y el consumo de líquidos saludables.',
-            recommendation25: 'algo',
-            recommendation50: 'algo',
-            recommendation75: 'algo',
-            recommendation100: 'algo',
+            recommendations: ['25', 'algo', 'algo', 'algo'],
+          },
+        ],
+      },
+      {
+        id: 2,
+        title: 'sostenible',
+        description: 'algo',
+        categories: [
+          {
+            id: 1,
+            title: 'plastico',
+            description:
+              'Esta sección evalúa tus hábitos de hidratación y el consumo de líquidos saludables.',
+            recommendations: ['25', 'algo', 'algo', 'algo'],
           },
         ],
       },
