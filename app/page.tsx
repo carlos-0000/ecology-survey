@@ -92,134 +92,54 @@ const HomePage = () => {
   // Rest of the code...
 
   return (
-    <Grid condensed>
-      <Column span={12} lg={{ offset: 2 }}>
-        <Stack gap={7}>
-          <header>
-            <Stack gap={5}>
-              <h1>Plantilla Evaluación</h1>
-
-              <div className="header-content">
+    <>
+      <Grid condensed>
+        <Column span={12} lg={{ offset: 2 }}>
+          <Stack gap={7}>
+            <header>
+              <Stack gap={5}>
                 <img
-                  src="/img/bg.png"
+                  src="/img/ecologia/img-front-page.png"
                   alt="Imagen representativa del proyecto generada con inteligencia artificial para el proyecto USCO"
                   className="header-image"
+                  style={{ width: '100%' }}
                 />
-                <p className="header-text">
-                  Este aplicativo es una herramienta interactiva diseñada para
-                  facilitar la evaluación y calificación de software en diversos
-                  aspectos clave como rendimiento y calidad. Utilizando una
-                  plantilla de evaluación estructurada, los evaluadores pueden
-                  sistemáticamente revisar y puntuar el software según criterios
-                  predefinidos que reflejan los objetivos generales y
-                  específicos del software en cuestión.
-                </p>
-              </div>
-            </Stack>
-          </header>
+                <div style={{ paddingInline: '1rem' }}>
+                  <h1>Plantilla Evaluación</h1>
 
-          <Form onSubmit={handleSubmit}>
-            <Stack gap={7}>
-              <div className="input-grid">
-                <div className="input-group">
-                  <DatePicker
-                    datePickerType="single"
-                    onChange={handleDateChange}
-                    className="date-picker"
+                  <div className="header-content">
+                    <p className="header-text">
+                      Este aplicativo es una herramienta interactiva diseñada
+                      para facilitar la evaluación y calificación de software en
+                      diversos aspectos clave como rendimiento y calidad.
+                      Utilizando una plantilla de evaluación estructurada, los
+                      evaluadores pueden sistemáticamente revisar y puntuar el
+                      software según criterios predefinidos que reflejan los
+                      objetivos generales y específicos del software en
+                      cuestión.
+                    </p>
+                  </div>
+                  <div
+                    style={{
+                      marginTop: '1rem',
+                      display: 'flex',
+                      justifyContent: 'center',
+                    }}
                   >
-                    <DatePickerInput
-                      id="date"
-                      labelText="Fecha *"
-                      invalid={!!errors.date}
-                      invalidText={errors.date || ''}
-                    />
-                  </DatePicker>
-                  <TextInput
-                    id="city"
-                    labelText="Ciudad *"
-                    value={softwareInfo.city}
-                    onChange={handleChange}
-                    invalid={!!errors.city}
-                    invalidText={errors.city || ''}
-                    maxLength={255}
-                  />
-                  <TextInput
-                    id="company"
-                    labelText="Empresa *"
-                    value={softwareInfo.company}
-                    onChange={handleChange}
-                    invalid={!!errors.company}
-                    invalidText={errors.company || ''}
-                    maxLength={255}
-                  />
-                  <TextInput
-                    id="phone"
-                    labelText="Teléfono *"
-                    value={softwareInfo.phone}
-                    onChange={handleChange}
-                    invalid={!!errors.phone}
-                    invalidText={errors.phone || ''}
-                    maxLength={255}
-                  />
+                    <Button
+                      onClick={() => push('/encuesta')}
+                      renderIcon={ArrowRight}
+                    >
+                      Empezar encuesta
+                    </Button>
+                  </div>
                 </div>
-                <div className="full-width-input">
-                  <TextInput
-                    id="softwareName"
-                    labelText="Nombre del Software *"
-                    value={softwareInfo.softwareName}
-                    onChange={handleChange}
-                    invalid={!!errors.softwareName}
-                    invalidText={errors.softwareName || ''}
-                    maxLength={255}
-                  />
-                </div>
-                <div className="full-width-input">
-                  <TextArea
-                    id="generalObjectives"
-                    labelText="Objetivos Generales del Software *"
-                    value={softwareInfo.generalObjectives}
-                    onChange={handleChange}
-                    invalid={!!errors.generalObjectives}
-                    invalidText={errors.generalObjectives || ''}
-                  />
-                </div>
-                <div className="full-width-input">
-                  <TextArea
-                    id="specificObjectives"
-                    labelText="Objetivos Específicos del Software *"
-                    value={softwareInfo.specificObjectives}
-                    onChange={handleChange}
-                    invalid={!!errors.specificObjectives}
-                    invalidText={errors.specificObjectives || ''}
-                  />
-                </div>
-              </div>
-
-              <ParticipantsForm />
-
-              {errors.participants && (
-                <p style={{ color: 'red' }}>{errors.participants}</p>
-              )}
-              <div style={{ marginBottom: '2rem' }}>
-                <Button
-                  kind="secondary"
-                  renderIcon={ViewFilled}
-                  onClick={() => {
-                    push('/historial');
-                  }}
-                  style={{ marginRight: '1rem', marginBottom: '1rem' }}
-                >
-                  Ver software evaluados
-                </Button>
-                <Button type="submit" renderIcon={ArrowRight}>
-                  Siguiente
-                </Button>
-              </div>
-            </Stack>
-          </Form>
-        </Stack>
-      </Column>
-    </Grid>
+              </Stack>
+            </header>
+          </Stack>
+        </Column>
+      </Grid>
+    </>
   );
 };
 

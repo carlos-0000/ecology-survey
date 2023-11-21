@@ -76,58 +76,6 @@ const Page: NextPage = () => {
               gap: '1rem',
             }}
           >
-            <ParametrizationTable />
-
-            <AccordionTile title={'¿Cómo evaluar?'} isOpenProp={surveyFinished}>
-              <p style={{ display: 'block', paddingBlockStart: '1rem' }}>
-                Por favor lee atentamente cada uno de los criterios de valor de
-                evaluación y desliza el control deslizante hasta el valor que
-                consideres más adecuado. Si tienes alguna observación, por favor
-                escríbela en el recuadro de texto que se encuentra debajo del
-                control deslizante.
-              </p>
-              <TableContainer>
-                <DataTable
-                  rows={rows}
-                  headers={headers}
-                  isSortable={false}
-                  size={'sm'}
-                >
-                  {({
-                    rows,
-                    headers,
-                    getHeaderProps,
-                    getRowProps,
-                    getTableProps,
-                  }) => (
-                    <Table {...getTableProps()}>
-                      <TableHead>
-                        <TableRow>
-                          {headers.map((header, index) => (
-                            // @ts-ignore Carbon xd
-                            <TableHeader
-                              {...getHeaderProps({ header })}
-                              key={index}
-                            >
-                              {header.header}
-                            </TableHeader>
-                          ))}
-                        </TableRow>
-                      </TableHead>
-                      <TableBody>
-                        {rows.map((row, key) => (
-                          <TableRow {...getRowProps({ row })} key={key}>
-                            {row.cells.map((cell) => (
-                              <TableCell key={cell.id}>{cell.value}</TableCell>
-                            ))}
-                          </TableRow>
-                        ))}
-                      </TableBody>
-                    </Table>
-                  )}
-                </DataTable>
-              </TableContainer>
-            </AccordionTile>
             <AnswersComponent />
           </div>
         </Stack>

@@ -47,6 +47,48 @@ type ContextType = {
     }[];
   };
 
+  answersEcology: {
+    sections: {
+      id: number;
+      title: string;
+      description: string;
+      items: {
+        id: number;
+        id_category: number;
+        title_item: string;
+        description_item: string;
+        value: number;
+        options: {
+          label: string;
+          value: number;
+        }[];
+      }[];
+    }[];
+  };
+
+  categoryEcology: {
+    sections: {
+      id: number;
+      title: string;
+      description: string;
+      categories: {
+        id: number;
+        title: string;
+        description: string;
+        recommendation25: string;
+        recommendation50: string;
+        recommendation75: string;
+        recommendation100: string;
+      }[];
+    }[];
+  };
+
+  updateAnswerEcology: (
+    sectionId: number,
+    questionId: number,
+    value: number,
+  ) => void;
+
   updateSliderValue: (value: number) => void;
   updateSurveyFinished: (value: boolean) => void;
   updateSoftwareInfo: (info: typeof defaultContext.softwareInfo) => void;
@@ -458,6 +500,104 @@ const defaultContext: ContextType = {
       },
     ],
   },
+  answersEcology: {
+    sections: [
+      {
+        id: 1,
+        title: 'Saludable',
+        description:
+          'Esta sección evalúa tus hábitos de hidratación y el consumo de líquidos saludables.',
+        items: [
+          {
+            id: 1,
+            id_category: 1,
+            title_item: '¿Cuántos vasos de agua bebes al día?',
+            description_item:
+              'Considera solo el agua pura, excluyendo bebidas azucaradas o con cafeína.',
+            options: [
+              { label: 'Más de 8 vasos', value: 4 },
+              { label: '5 a 8 vasos', value: 3 },
+              { label: '2 a 4 vasos', value: 2 },
+              { label: 'Menos de 2 vasos', value: 1 },
+            ],
+            value: 1,
+          },
+          {
+            id: 2,
+            id_category: 1,
+            title_item:
+              '¿Con qué frecuencia consumes snacks o alimentos procesados?',
+            description_item:
+              'Ejemplos: papas fritas, galletas, comidas precocidas.',
+            options: [
+              { label: 'Todos los días', value: 1 },
+              { label: 'Varias veces a la semana', value: 2 },
+              { label: 'Una vez a la semana', value: 3 },
+              { label: 'Rara vez o nunca', value: 4 },
+            ],
+            value: 1,
+          },
+          {
+            id: 3,
+            id_category: 1,
+            title_item: '¿Qué tan variada es tu dieta?',
+            description_item:
+              'Considera la inclusión regular de distintos grupos alimenticios como proteínas, carbohidratos, grasas saludables, etc.',
+            options: [
+              { label: 'Muy variada', value: 4 },
+              { label: 'Bastante variada', value: 3 },
+              { label: 'Poco variada', value: 2 },
+              { label: 'Nada variada', value: 1 },
+            ],
+            value: 1,
+          },
+        ],
+      },
+      {
+        id: 2,
+        title: 'Sostenible',
+        description: 'edrgergre',
+        items: [
+          {
+            id: 1,
+            id_category: 1,
+            title_item: '¿Cuántos vasos de agua bebes al día?',
+            description_item:
+              'Considera solo el agua pura, excluyendo bebidas azucaradas o con cafeína.',
+            options: [
+              { label: 'Más de 8 vasos', value: 4 },
+              { label: '5 a 8 vasos', value: 3 },
+              { label: '2 a 4 vasos', value: 2 },
+              { label: 'Menos de 2 vasos', value: 1 },
+            ],
+            value: 1,
+          },
+        ],
+      },
+    ],
+  },
+  categoryEcology: {
+    sections: [
+      {
+        id: 1,
+        title: 'algo',
+        description: 'algo',
+        categories: [
+          {
+            id: 1,
+            title: 'Saludable',
+            description:
+              'Esta sección evalúa tus hábitos de hidratación y el consumo de líquidos saludables.',
+            recommendation25: 'algo',
+            recommendation50: 'algo',
+            recommendation75: 'algo',
+            recommendation100: 'algo',
+          },
+        ],
+      },
+    ],
+  },
+  updateAnswerEcology: () => {},
   updateSliderValue: () => {},
   updateSurveyFinished: () => {},
   updateSoftwareInfo: () => {},
@@ -477,6 +617,12 @@ export const SoftwareProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
+  const [answersEcology, setAnswersEcology] = useState(
+    defaultContext.answersEcology,
+  );
+  const [categoryEcology, setCategoryEcology] = useState(
+    defaultContext.categoryEcology,
+  );
   const [sliderValue, setSliderValue] = useState(defaultContext.sliderValue);
   const [surveyFinished, setSurveyFinished] = useState(
     defaultContext.surveyFinished,
@@ -556,6 +702,21 @@ export const SoftwareProvider = ({
     [answers],
   );
 
+  const updateAnswerEcology = useCallback(
+    (sectionId: number, questionId: number, value: number) => {
+      const newAnswers = { ...answersEcology };
+      const sectionIndex = newAnswers.sections.findIndex(
+        (section) => section.id === sectionId,
+      );
+      const questionIndex = newAnswers.sections[sectionIndex].items.findIndex(
+        (item) => item.id === questionId,
+      );
+      newAnswers.sections[sectionIndex].items[questionIndex].value = value;
+      setAnswersEcology(newAnswers);
+    },
+    [answersEcology],
+  );
+
   // Memorización de valores del contexto
   const contextValues = useMemo(
     () => ({
@@ -573,6 +734,9 @@ export const SoftwareProvider = ({
       answers,
       updateAnswers,
       updateAnswer,
+      answersEcology,
+      updateAnswerEcology,
+      categoryEcology,
     }),
     [
       softwareInfo,
@@ -581,6 +745,8 @@ export const SoftwareProvider = ({
       answers,
       sliderValue,
       surveyFinished,
+      answersEcology,
+      categoryEcology,
     ],
   );
 

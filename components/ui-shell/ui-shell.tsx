@@ -58,28 +58,12 @@ export const UIShell: React.FC<UIShellProps> = ({ content }) => {
             alt="Logo universidad"
             style={{ width: '2.2rem', marginRight: '0.5rem' }}
           />
-          Calidad de Software
+          Ecología
         </HeaderName>
-        <HeaderGlobalBar>
-          <HeaderGlobalAction
-            aria-label="Ver todos los software evaluados"
-            tooltipAlignment="end"
-            onClick={() => push('/historial')}
-          >
-            <ViewFilled size={25} />
-          </HeaderGlobalAction>
-          <HeaderGlobalAction
-            aria-label="Toggle theme"
-            tooltipAlignment="end"
-            onClick={() => toggleTheme(isLight ? 'g100' : 'white')}
-          >
-            {isLight ? <Asleep size={25} /> : <Light size={20} />}
-          </HeaderGlobalAction>
-        </HeaderGlobalBar>
       </Header>
       <Content
         id="main-content"
-        style={{ height: 'calc(100dvh - 3rem)', padding: '1rem' }}
+        style={{ height: 'calc(100dvh - 3rem)', padding: '0rem' }}
       >
         {content}
       </Content>

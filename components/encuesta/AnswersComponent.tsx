@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { useEffect, useState } from 'react';
 // @ts-ignore
 import { Button, Layer, Slider, Stack, TextArea, Tile } from '@carbon/react';
@@ -13,35 +12,18 @@ const fadeOutLeftClassNames = 'animate__animated animate__fadeOutLeft';
 const fadeOutRightClassNames = 'animate__animated animate__fadeOutRight';
 const animationDuration = Number(durationSlow01.slice(0, -2)); // 700ms like
 
-const getPercentageColor = (value: number) => {
-  return value <= 30
-    ? 'var(--cds-support-error)'
-    : value <= 50
-    ? 'var(--cds-support-caution-major)'
-    : value <= 89
-    ? 'var(--cds-support-caution-minor)'
-    : 'var(--cds-support-success)';
-};
-
-const categories = {
-  '0': 'No cumple',
-  '1': 'Cumple parcialmente',
-  '2': 'Cumple',
-  '3': 'Cumple totalmente',
-};
-
 export const AnswersComponent = () => {
-  const { answers, updateAnswer, sliderValue, updateSliderValue } =
-    useSoftware();
-  const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
+  /*const { answers, updateAnswer, sliderValue, updateSliderValue } =
+    useSoftware();*/
+  const { answersEcology, updateAnswerEcology } = useSoftware();
+  const [currentSectionIndex, setCurrentSectionIndex] = useState(1);
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
   const [currentValue, setCurrentValue] = useState(0);
-  const [currentObservation, setCurrentObservation] = useState('');
 
   const [sectionClassNames, setSectionClassNames] = useState('');
   const [itemClassNames, setItemClassNames] = useState('');
 
-  const currentSection = answers.sections[currentSectionIndex];
+  const currentSection = answersEcology.sections[currentSectionIndex];
   const currentItem = currentSection?.items[currentItemIndex];
 
   const changeItemSection = (prev = false) => {
@@ -49,13 +31,7 @@ export const AnswersComponent = () => {
     console.log('currentSection.id', currentSection.id);
     console.log('currentItem.id', currentItem.id);
     console.log('currentValue', currentValue);
-    console.log('currentObservation', currentObservation);
-    updateAnswer(
-      currentSection.id,
-      currentItem.id,
-      currentValue,
-      currentObservation,
-    );
+    updateAnswerEcology(currentSection.id, currentItem.id, currentValue);
 
     if (prev) {
       const nextItemIndex = currentItemIndex - 1;
@@ -73,7 +49,7 @@ export const AnswersComponent = () => {
         setItemClassNames(fadeOutRightClassNames);
         setTimeout(() => {
           setCurrentItemIndex(
-            answers.sections[nextSectionIndex].items.length - 1,
+            answersEcology.sections[nextSectionIndex].items.length - 1,
           );
           setItemClassNames(fadeInLeftClassNames);
         }, animationDuration);
@@ -109,8 +85,7 @@ export const AnswersComponent = () => {
     }
 
     // Limpia los valores actuales para la siguiente pregunta
-    setCurrentValue(currentValue);
-    setCurrentObservation('');
+    setCurrentValue(0);
   };
 
   if (!currentItem) {
@@ -132,7 +107,8 @@ export const AnswersComponent = () => {
             <div style={{ padding: '1rem' }}>
               <Stack gap={3}>
                 <small>
-                  Sección {currentSection.id} de {answers.sections.length}
+                  Sección {currentSection.id} de{' '}
+                  {answersEcology.sections.length}
                 </small>
                 <h2 style={{ textTransform: 'capitalize' }}>
                   {currentSection.title.toLowerCase()}
@@ -148,56 +124,39 @@ export const AnswersComponent = () => {
                   </small>
                   <h3>{currentItem.title_item}</h3>
                   <p>{currentItem.description_item}</p>
+                  <img
+                    src="/img/ecologia/img-front-page.png"
+                    style={{ width: '100%' }}
+                  />
                   <div
                     style={{
                       display: 'flex',
                       flexDirection: 'column',
                       paddingBlock: '.75rem',
                       gap: '.5rem',
+                      alignItems: 'center',
                     }}
                   >
-                    <Slider
-                      labelText="Nivel de cumplimiento"
-                      max={100}
-                      min={0}
-                      step={1}
-                      value={sliderValue}
-                      hideTextInput={true}
-                      formatLabel={(value: string) => `${value}%`}
-                      onChange={({ value }: { value: number }) => {
-                        const result =
-                          value <= 30
-                            ? 0
-                            : value <= 50
-                            ? 1
-                            : value <= 89
-                            ? 2
-                            : 3;
-                        updateSliderValue(value);
-                        setCurrentValue(result);
-                      }}
-                    />
-                    <span
-                      style={{
-                        color: getPercentageColor(sliderValue),
-                        fontSize: '1.25rem',
-                        fontWeight: 'bold',
-                      }}
-                    >
-                      {sliderValue}% -{' '}
-                      {
-                        categories[
-                          String(currentValue) as keyof typeof categories
-                        ]
-                      }
-                    </span>
+                    {answersEcology.sections[currentSectionIndex].items[
+                      currentItemIndex
+                    ].options.map((option, index) => {
+                      return (
+                        <Button
+                          key={index}
+                          kind={'tertiary'}
+                          style={{
+                            width: '100%',
+                            maxInlineSize: 'inherit',
+                          }}
+                          onClick={() => {
+                            setCurrentValue(option.value);
+                          }}
+                        >
+                          {option.label}
+                        </Button>
+                      );
+                    })}
                   </div>
-                  <TextArea
-                    id={`observation-${currentItem.id}`}
-                    labelText="Observación"
-                    value={currentObservation}
-                    onChange={(e) => setCurrentObservation(e.target.value)}
-                  />
                 </Stack>
               </Layer>
             </Tile>
@@ -207,18 +166,25 @@ export const AnswersComponent = () => {
       <div
         style={{
           display: 'flex',
-          justifyContent: 'space-between',
-          marginBottom: '2rem',
+          justifyContent: 'flex-end',
+          marginBottom: '1rem',
+          marginInline: '1rem',
+          backgroundColor: 'white',
         }}
       >
-        <Button
+        {/*<Button
           kind={'secondary'}
           onClick={() => changeItemSection(true)}
           disabled={currentSectionIndex === 0 && currentItemIndex === 0}
         >
           Anterior
+        </Button>*/}
+        <Button
+          onClick={() => changeItemSection()}
+          disabled={currentValue === 0}
+        >
+          Siguiente
         </Button>
-        <Button onClick={() => changeItemSection()}>Siguiente</Button>
       </div>
     </div>
   );
