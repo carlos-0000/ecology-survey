@@ -204,7 +204,7 @@ const ResultTable = () => {
   return (
     <div>
       <img
-        src="/img/womenn.png"
+        src={'/img/womenn.png'}
         style={{
           width: '100%',
           objectPosition: 'center',
@@ -252,7 +252,7 @@ const ResultTable = () => {
             <Tile>
               <Stack gap={4}>
                 {seccion.promediosCategorias.map((catPromedio) => (
-                  <Layer>
+                  <Layer key={catPromedio.idCategoria}>
                     <Stack gap={5}>
                       <Tile key={catPromedio.idCategoria}>
                         <MeterChart

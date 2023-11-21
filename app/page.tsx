@@ -116,7 +116,7 @@ const HomePage = () => {
                       tus hábitos hacia una nutrición más sostenible y
                       saludable. Recibe recomendaciones personalizadas para
                       mejorar tu alimentación. ¡Emprende este viaje de bienestar
-                      hoy mismo!"
+                      hoy mismo!
                     </p>
                   </div>
                   <div
