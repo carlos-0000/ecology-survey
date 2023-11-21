@@ -2,7 +2,7 @@
 'use client';
 import React, { useRef } from 'react';
 import { TextArea, Button } from '@carbon/react';
-import { Copy20, Launch } from '@carbon/icons-react';
+import { Launch } from '@carbon/icons-react';
 
 const PromptCopier = ({ prompt }) => {
   const textAreaRef = useRef(null);
@@ -39,7 +39,7 @@ const PromptCopier = ({ prompt }) => {
         value={prompt}
         style={{ height: '200px' }} // Ajusta la altura según tus necesidades
       />
-      <Button kind="primary" onClick={copiarAlPortapapeles} renderIcon={Copy20}>
+      <Button kind="primary" onClick={copiarAlPortapapeles}>
         Copiar
       </Button>
     </div>
