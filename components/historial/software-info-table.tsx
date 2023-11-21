@@ -29,7 +29,7 @@ const SoftwareInfoTable = () => {
         const response = await fetch('/api/get-softwares-info');
         if (!response.ok) {
           console.log('Error:', response);
-          throw new Error('Error al obtener los datos');
+          throw new Error('Error al obtener los datos ');
         }
         const rows = await response.json();
         console.log('rows', rows);
