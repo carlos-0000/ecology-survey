@@ -105,25 +105,23 @@ const HomePage = () => {
                   style={{ width: '100%' }}
                 />
                 <div style={{ paddingInline: '1rem' }}>
-                  <h1>Plantilla Evaluación</h1>
+                  <h1>
+                    ¿Cómo influye tu alimentación en tu salud y el medio
+                    ambiente?
+                  </h1>
 
-                  <div className="header-content">
+                  <div className="header-content" style={{ marginTop: '1rem' }}>
                     <p className="header-text">
-                      Este aplicativo es una herramienta interactiva diseñada
-                      para facilitar la evaluación y calificación de software en
-                      diversos aspectos clave como rendimiento y calidad.
-                      Utilizando una plantilla de evaluación estructurada, los
-                      evaluadores pueden sistemáticamente revisar y puntuar el
-                      software según criterios predefinidos que reflejan los
-                      objetivos generales y específicos del software en
-                      cuestión.
+                      Participa en nuestra encuesta y descubre cómo transformar
+                      tus hábitos hacia una nutrición más sostenible y
+                      saludable. Recibe recomendaciones personalizadas para
+                      mejorar tu alimentación. ¡Emprende este viaje de bienestar
+                      hoy mismo!"
                     </p>
                   </div>
                   <div
                     style={{
                       marginTop: '1rem',
-                      display: 'flex',
-                      justifyContent: 'center',
                     }}
                   >
                     <Button

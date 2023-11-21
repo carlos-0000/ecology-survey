@@ -73,7 +73,6 @@ const Page: NextPage = () => {
               display: 'grid',
               gridTemplateRows: 'auto min-content 1fr',
               height: '100%',
-              gap: '1rem',
             }}
           >
             <AnswersComponent />

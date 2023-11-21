@@ -98,6 +98,7 @@ export const AnswersComponent = () => {
         height: '100%',
         display: 'grid',
         gridTemplateRows: '1fr auto',
+        gap: '0rem',
       }}
     >
       <div style={{ overflow: 'hidden' }}>
@@ -105,27 +106,56 @@ export const AnswersComponent = () => {
           <Layer>
             <div style={{ padding: '1rem' }}>
               <Stack gap={3}>
-                <small>
+                <small
+                  style={{
+                    lineHeight: '0.8',
+                  }}
+                >
                   Sección {currentSection.id} de{' '}
                   {answersEcology.sections.length}
                 </small>
-                <h2 style={{ textTransform: 'capitalize' }}>
+                <h4
+                  style={{
+                    textTransform: 'capitalize',
+                    fontWeight: 'bold',
+                    lineHeight: '1',
+                  }}
+                >
                   {currentSection.title.toLowerCase()}
-                </h2>
-                <p>{currentSection.description}</p>
+                </h4>
+                <p style={{ fontSize: '0.8rem', lineHeight: '1.1' }}>
+                  {currentSection.description}
+                </p>
               </Stack>
             </div>
             <Tile className={itemClassNames}>
               <Layer>
-                <Stack gap={3}>
+                <Stack gap={2}>
                   <small>
                     Pregunta {currentItem.id} de {currentSection.items.length}
                   </small>
-                  <img src={currentItem.url} style={{ width: '100%' }} />
                   <h4 style={{ fontWeight: 'bold', lineHeight: '1.25' }}>
                     {currentItem.title_item}
                   </h4>
-                  <p>{currentItem.description_item}</p>
+
+                  <div
+                    style={{
+                      display: 'flex',
+                      justifyContent: 'center',
+                      paddingBottom: '1rem',
+                    }}
+                  >
+                    <img src={currentItem.url} style={{ width: '100%' }} />
+                  </div>
+                  <p
+                    style={{
+                      fontSize: '1rem',
+                      lineHeight: '1.1',
+                    }}
+                  >
+                    {currentItem.description_item}
+                  </p>
+
                   <div
                     style={{
                       display: 'flex',
@@ -171,7 +201,7 @@ export const AnswersComponent = () => {
         style={{
           display: 'flex',
           justifyContent: 'flex-end',
-          marginBottom: '1rem',
+          marginBottom: '0.8rem',
           marginInline: '1rem',
           backgroundColor: 'white',
         }}

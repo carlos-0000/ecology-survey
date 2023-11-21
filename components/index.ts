@@ -6,3 +6,4 @@ export * from './resultTable';
 export * from './historial';
 export * from './accordion-tile';
 export * from './async-button';
+export * from './copy';

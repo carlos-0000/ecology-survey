@@ -407,7 +407,7 @@
           "id_category": 3,
           "title_item": "¿Estás dispuesto/a a probar alternativas sostenibles a los alimentos que consumes regularmente?",
           "description_item": "Evalúa la disposición a probar alternativas sostenibles, alentando la exploración de opciones amigables con el medio ambiente.",
-          "url": "/img/3.png",
+          "url": "/img/ofreciendo.png",
           "options": [
             {
               "label": "Definitivamente sí",
@@ -433,7 +433,7 @@
           "id_category": 2,
           "title_item": "¿Te gustaría conocer más sobre cómo tus decisiones alimenticias impactan a comunidades y ecosistemas lejanos?",
           "description_item": "Aborda la voluntad de conocer el impacto global de tus elecciones, fomentando la consciencia más allá de tu entorno inmediato.",
-          "url": "/img/4.png",
+          "url": "/img/impacto.png",
           "options": [
             {
               "label": "Definitivamente sí",
