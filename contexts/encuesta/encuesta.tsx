@@ -7,6 +7,9 @@ import React, {
   useEffect,
 } from 'react';
 
+import preguntas from '@/data/preguntas.json';
+import categorias from '@/data/categorias.json';
+
 // Tipos de datos proporcionados
 type ContextType = {
   sliderValue: number;
@@ -58,6 +61,7 @@ type ContextType = {
         title_item: string;
         description_item: string;
         value: number;
+        url: string;
         options: {
           label: string;
           value: number;
@@ -497,114 +501,8 @@ const defaultContext: ContextType = {
       },
     ],
   },
-  answersEcology: {
-    sections: [
-      {
-        id: 1,
-        title: 'Saludable',
-        description:
-          'Esta sección evalúa tus hábitos de hidratación y el consumo de líquidos saludables.',
-        items: [
-          {
-            id: 1,
-            id_category: 1,
-            title_item: '¿Cuántos vasos de agua bebes al día?',
-            description_item:
-              'Considera solo el agua pura, excluyendo bebidas azucaradas o con cafeína.',
-            options: [
-              { label: 'Más de 8 vasos', value: 4 },
-              { label: '5 a 8 vasos', value: 3 },
-              { label: '2 a 4 vasos', value: 2 },
-              { label: 'Menos de 2 vasos', value: 1 },
-            ],
-            value: 1,
-          },
-          {
-            id: 2,
-            id_category: 1,
-            title_item:
-              '¿Con qué frecuencia consumes snacks o alimentos procesados?',
-            description_item:
-              'Ejemplos: papas fritas, galletas, comidas precocidas.',
-            options: [
-              { label: 'Todos los días', value: 1 },
-              { label: 'Varias veces a la semana', value: 2 },
-              { label: 'Una vez a la semana', value: 3 },
-              { label: 'Rara vez o nunca', value: 4 },
-            ],
-            value: 1,
-          },
-          {
-            id: 3,
-            id_category: 1,
-            title_item: '¿Qué tan variada es tu dieta?',
-            description_item:
-              'Considera la inclusión regular de distintos grupos alimenticios como proteínas, carbohidratos, grasas saludables, etc.',
-            options: [
-              { label: 'Muy variada', value: 4 },
-              { label: 'Bastante variada', value: 3 },
-              { label: 'Poco variada', value: 2 },
-              { label: 'Nada variada', value: 1 },
-            ],
-            value: 1,
-          },
-        ],
-      },
-      {
-        id: 2,
-        title: 'Sostenible',
-        description: 'edrgergre',
-        items: [
-          {
-            id: 1,
-            id_category: 1,
-            title_item: '¿Cuántos vasos de agua bebes al día?',
-            description_item:
-              'Considera solo el agua pura, excluyendo bebidas azucaradas o con cafeína.',
-            options: [
-              { label: 'Más de 8 vasos', value: 4 },
-              { label: '5 a 8 vasos', value: 3 },
-              { label: '2 a 4 vasos', value: 2 },
-              { label: 'Menos de 2 vasos', value: 1 },
-            ],
-            value: 1,
-          },
-        ],
-      },
-    ],
-  },
-  categoryEcology: {
-    sections: [
-      {
-        id: 1,
-        title: 'saludable',
-        description: 'algo',
-        categories: [
-          {
-            id: 1,
-            title: 'azucar',
-            description:
-              'Esta sección evalúa tus hábitos de hidratación y el consumo de líquidos saludables.',
-            recommendations: ['25', 'algo', 'algo', 'algo'],
-          },
-        ],
-      },
-      {
-        id: 2,
-        title: 'sostenible',
-        description: 'algo',
-        categories: [
-          {
-            id: 1,
-            title: 'plastico',
-            description:
-              'Esta sección evalúa tus hábitos de hidratación y el consumo de líquidos saludables.',
-            recommendations: ['25', 'algo', 'algo', 'algo'],
-          },
-        ],
-      },
-    ],
-  },
+  answersEcology: preguntas,
+  categoryEcology: categorias,
   updateAnswerEcology: () => {},
   updateSliderValue: () => {},
   updateSurveyFinished: () => {},

@@ -16,7 +16,7 @@ export const AnswersComponent = () => {
   /*const { answers, updateAnswer, sliderValue, updateSliderValue } =
     useSoftware();*/
   const { answersEcology, updateAnswerEcology } = useSoftware();
-  const [currentSectionIndex, setCurrentSectionIndex] = useState(1);
+  const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
   const [currentValue, setCurrentValue] = useState(0);
 
@@ -98,7 +98,6 @@ export const AnswersComponent = () => {
         height: '100%',
         display: 'grid',
         gridTemplateRows: '1fr auto',
-        gap: '1rem',
       }}
     >
       <div style={{ overflow: 'hidden' }}>
@@ -122,17 +121,16 @@ export const AnswersComponent = () => {
                   <small>
                     Pregunta {currentItem.id} de {currentSection.items.length}
                   </small>
-                  <h3>{currentItem.title_item}</h3>
+                  <img src={currentItem.url} style={{ width: '100%' }} />
+                  <h4 style={{ fontWeight: 'bold', lineHeight: '1.25' }}>
+                    {currentItem.title_item}
+                  </h4>
                   <p>{currentItem.description_item}</p>
-                  <img
-                    src="/img/ecologia/img-front-page.png"
-                    style={{ width: '100%' }}
-                  />
                   <div
                     style={{
                       display: 'flex',
                       flexDirection: 'column',
-                      paddingBlock: '.75rem',
+                      paddingBlockStart: '.75rem',
                       gap: '.5rem',
                       alignItems: 'center',
                     }}
@@ -147,6 +145,12 @@ export const AnswersComponent = () => {
                           style={{
                             width: '100%',
                             maxInlineSize: 'inherit',
+                            ...(currentValue === option.value
+                              ? {
+                                  backgroundColor: 'var(--cds-button-tertiary)',
+                                  color: 'var(--cds-text-inverse)',
+                                }
+                              : {}),
                           }}
                           onClick={() => {
                             setCurrentValue(option.value);

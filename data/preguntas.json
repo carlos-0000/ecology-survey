@@ -1,0 +1,460 @@
+{
+  "sections": [
+    {
+      "id": 1,
+      "title": "Saludable",
+      "description": "Esta sección evalúa tus hábitos de hidratación y el consumo de líquidos saludables.",
+      "items": [
+        {
+          "id": 1,
+          "id_category": 1,
+          "title_item": "¿Cuántos vasos de agua bebes al día?",
+          "description_item": "Considera solo el agua pura, excluyendo bebidas azucaradas o con cafeína.",
+          "url": "/img/agua-men.png",
+          "options": [
+            {
+              "label": "Más de 8 vasos",
+              "value": 4
+            },
+            {
+              "label": "5 a 8 vasos",
+              "value": 3
+            },
+            {
+              "label": "2 a 4 vasos",
+              "value": 2
+            },
+            {
+              "label": "Menos de 2 vasos",
+              "value": 1
+            }
+          ],
+          "value": 1
+        },
+        {
+          "id": 2,
+          "id_category": 1,
+          "title_item": "¿Reemplazas frecuentemente el agua por bebidas azucaradas?",
+          "description_item": "Incluye bebidas como sodas, jugos azucarados o bebidas deportivas.",
+          "url": "/img/cocacola-men.png",
+          "options": [
+            {
+              "label": "Nunca",
+              "value": 4
+            },
+            {
+              "label": "Raramente",
+              "value": 3
+            },
+            {
+              "label": "A menudo",
+              "value": 2
+            },
+            {
+              "label": "Siempre",
+              "value": 1
+            }
+          ],
+          "value": 1
+        },
+        {
+          "id": 1,
+          "id_category": 2,
+          "title_item": "¿Incluyes vegetales verdes en tus comidas diarias?",
+          "description_item": "Ejemplos: espinacas, brócoli, lechuga.",
+          "url": "/img/verduras-women.png",
+          "options": [
+            {
+              "label": "En todas las comidas",
+              "value": 4
+            },
+            {
+              "label": "Una vez al día",
+              "value": 3
+            },
+            {
+              "label": "Pocas veces a la semana",
+              "value": 2
+            },
+            {
+              "label": "Rara vez o nunca",
+              "value": 1
+            }
+          ],
+          "value": 1
+        },
+        {
+          "id": 2,
+          "id_category": 2,
+          "title_item": "¿Consumes frutas enteras en lugar de jugos?",
+          "description_item": "Las frutas enteras conservan más fibra y nutrientes en comparación con los jugos.",
+          "url": "/img/jugo-women.png",
+          "options": [
+            {
+              "label": "Siempre",
+              "value": 4
+            },
+            {
+              "label": "A menudo",
+              "value": 3
+            },
+            {
+              "label": "Raramente",
+              "value": 2
+            },
+            {
+              "label": "Nunca",
+              "value": 1
+            }
+          ],
+          "value": 1
+        },
+        {
+          "id": 1,
+          "id_category": 3,
+          "title_item": "¿Cuántas veces a la semana consumes comidas rápidas o precocidas?",
+          "description_item": "Incluye comidas como hamburguesas, pizzas, o platos precocidos congelados.",
+          "url": "/img/rapidas-men.png",
+          "options": [
+            {
+              "label": "Nunca",
+              "value": 4
+            },
+            {
+              "label": "1-2 veces a la semana",
+              "value": 3
+            },
+            {
+              "label": "3-4 veces a la semana",
+              "value": 2
+            },
+            {
+              "label": "Más de 4 veces a la semana",
+              "value": 1
+            }
+          ],
+          "value": 1
+        },
+        {
+          "id": 2,
+          "id_category": 3,
+          "title_item": "¿Lees las etiquetas nutricionales al comprar alimentos empaquetados?",
+          "description_item": "Revisar las etiquetas puede ayudarte a elegir opciones con menos aditivos y conservantes.",
+          "url": "/img/tabla-women.png",
+          "options": [
+            {
+              "label": "Siempre",
+              "value": 4
+            },
+            {
+              "label": "A menudo",
+              "value": 3
+            },
+            {
+              "label": "Raramente",
+              "value": 2
+            },
+            {
+              "label": "Nunca",
+              "value": 1
+            }
+          ],
+          "value": 1
+        },
+        {
+          "id": 1,
+          "id_category": 4,
+          "title_item": "¿Con qué frecuencia consumes bebidas azucaradas?",
+          "description_item": "Incluye sodas, jugos azucarados y bebidas energéticas.",
+          "url": "/img/energetica-men.png",
+          "options": [
+            {
+              "label": "Nunca o raramente",
+              "value": 4
+            },
+            {
+              "label": "1-2 veces a la semana",
+              "value": 3
+            },
+            {
+              "label": "3-4 veces a la semana",
+              "value": 2
+            },
+            {
+              "label": "Diariamente",
+              "value": 1
+            }
+          ],
+          "value": 1
+        },
+        {
+          "id": 2,
+          "id_category": 4,
+          "title_item": "¿Qué tan a menudo consumes dulces, postres o snacks azucarados?",
+          "description_item": "Considera productos como pasteles, galletas, chocolates, caramelos.",
+          "url": "/img/postre-women.png",
+          "options": [
+            {
+              "label": "Nunca o raramente",
+              "value": 4
+            },
+            {
+              "label": "1-2 veces a la semana",
+              "value": 3
+            },
+            {
+              "label": "3-4 veces a la semana",
+              "value": 2
+            },
+            {
+              "label": "Diariamente",
+              "value": 1
+            }
+          ],
+          "value": 1
+        },
+        {
+          "id": 3,
+          "id_category": 4,
+          "title_item": "¿Revisas las etiquetas de los productos para controlar el contenido de azúcar?",
+          "description_item": "Esto incluye buscar azúcares añadidos en productos como yogures, cereales y salsas.",
+          "url": "/img/azucar.webp",
+          "options": [
+            {
+              "label": "Siempre",
+              "value": 4
+            },
+            {
+              "label": "A menudo",
+              "value": 3
+            },
+            {
+              "label": "Raramente",
+              "value": 2
+            },
+            {
+              "label": "Nunca",
+              "value": 1
+            }
+          ],
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Sostenibilidad",
+      "description": "Esta sección evalúa el impacto ambiental de tus elecciones alimenticias.",
+      "items": [
+        {
+          "id": 1,
+          "id_category": 1,
+          "title_item": "¿Qué porcentaje de tu dieta proviene de fuentes vegetales?",
+          "description_item": "Evalúa tu ingesta de fuentes vegetales, impulsando una dieta más saludable y sostenible.",
+          "url": "/img/fuente.png",
+          "options": [
+            {
+              "label": "Mayormente o completamente vegetal",
+              "value": 4
+            },
+            {
+              "label": "Entre el 50 y 75%",
+              "value": 3
+            },
+            {
+              "label": "Menos de la mitad",
+              "value": 2
+            },
+            {
+              "label": "Muy poco o nada",
+              "value": 1
+            }
+          ],
+          "value": 1
+        },
+        {
+          "id": 2,
+          "id_category": 2,
+          "title_item": "¿Investigas o te informas sobre el origen de los alimentos que consumes?",
+          "description_item": "Indaga sobre tu atención al origen de los alimentos, promoviendo elecciones informadas y éticas.",
+          "url": "/img/nutricion-men.png",
+          "options": [
+            {
+              "label": "Siempre",
+              "value": 4
+            },
+            {
+              "label": "A veces",
+              "value": 3
+            },
+            {
+              "label": "Raramente",
+              "value": 2
+            },
+            {
+              "label": "Nunca",
+              "value": 1
+            }
+          ],
+          "value": 1
+        },
+        {
+          "id": 3,
+          "id_category": 3,
+          "title_item": "¿Con qué frecuencia eliges productos orgánicos o de cultivo sostenible?",
+          "description_item": "Explora tu elección de productos sostenibles, favoreciendo prácticas amigables con el medio ambiente.",
+          "url": "/img/comparacion.png",
+          "options": [
+            {
+              "label": "Siempre",
+              "value": 4
+            },
+            {
+              "label": "A veces",
+              "value": 3
+            },
+            {
+              "label": "Raramente",
+              "value": 2
+            },
+            {
+              "label": "Nunca",
+              "value": 1
+            }
+          ],
+          "value": 1
+        },
+        {
+          "id": 4,
+          "id_category": 2,
+          "title_item": "¿Compras alimentos en mercados locales o apoyas a pequeños productores de tu región?",
+          "description_item": "Evalúa tu apoyo a productores locales, fomentando la solidaridad y sostenibilidad comunitaria.",
+          "url": "/img/supermercado.png",
+          "options": [
+            {
+              "label": "Siempre",
+              "value": 4
+            },
+            {
+              "label": "A veces",
+              "value": 3
+            },
+            {
+              "label": "Raramente",
+              "value": 2
+            },
+            {
+              "label": "Nunca",
+              "value": 1
+            }
+          ],
+          "value": 1
+        },
+        {
+          "id": 5,
+          "id_category": 3,
+          "title_item": "¿Reducirías tu consumo de productos con envases de plástico o no reciclables si tuvieras opciones sostenibles?",
+          "description_item": "Aborda la disposición a reducir envases no reciclables, promoviendo un enfoque sostenible y consciente.",
+          "url": "/img/1.png",
+          "options": [
+            {
+              "label": "Definitivamente sí",
+              "value": 4
+            },
+            {
+              "label": "Probablemente si",
+              "value": 3
+            },
+            {
+              "label": "No estoy seguro/a",
+              "value": 2
+            },
+            {
+              "label": "Probablemente no",
+              "value": 1
+            }
+          ],
+          "value": 1
+        },
+        {
+          "id": 6,
+          "id_category": 2,
+          "title_item": "¿Cuál es tu opinión sobre el desperdicio de alimentos?",
+          "description_item": "Reflexiona sobre tu actitud hacia el desperdicio de alimentos, destacando la importancia de reducirlo.",
+          "url": "/img/2.png",
+          "options": [
+            {
+              "label": "Intento no desperdiciar nada",
+              "value": 4
+            },
+            {
+              "label": "A veces tiro alimentos",
+              "value": 3
+            },
+            {
+              "label": "No había pensado en ello",
+              "value": 2
+            },
+            {
+              "label": "No me preocupa el desperdicio",
+              "value": 1
+            }
+          ],
+          "value": 1
+        },
+        {
+          "id": 7,
+          "id_category": 3,
+          "title_item": "¿Estás dispuesto/a a probar alternativas sostenibles a los alimentos que consumes regularmente?",
+          "description_item": "Evalúa la disposición a probar alternativas sostenibles, alentando la exploración de opciones amigables con el medio ambiente.",
+          "url": "/img/3.png",
+          "options": [
+            {
+              "label": "Definitivamente sí",
+              "value": 4
+            },
+            {
+              "label": "Probablemente si",
+              "value": 3
+            },
+            {
+              "label": "No estoy seguro/a",
+              "value": 2
+            },
+            {
+              "label": "Probablemente no",
+              "value": 1
+            }
+          ],
+          "value": 1
+        },
+        {
+          "id": 8,
+          "id_category": 2,
+          "title_item": "¿Te gustaría conocer más sobre cómo tus decisiones alimenticias impactan a comunidades y ecosistemas lejanos?",
+          "description_item": "Aborda la voluntad de conocer el impacto global de tus elecciones, fomentando la consciencia más allá de tu entorno inmediato.",
+          "url": "/img/4.png",
+          "options": [
+            {
+              "label": "Definitivamente sí",
+              "value": 4
+            },
+            {
+              "label": "Probablemente si",
+              "value": 3
+            },
+            {
+              "label": "No estoy seguro/a",
+              "value": 2
+            },
+            {
+              "label": "Probablemente no",
+              "value": 1
+            }
+          ],
+          "value": 1
+        }
+      ]
+    }
+  ]
+}

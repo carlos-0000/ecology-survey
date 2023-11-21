@@ -1,0 +1,95 @@
+{
+  "sections": [
+    {
+      "id": 1,
+      "title": "saludable",
+      "description": "se centra en fomentar y mantener hábitos alimenticios beneficiosos para la salud general. Esta categoría abarca diversos aspectos de la nutrición, como la hidratación adecuada, el consumo equilibrado de frutas y verduras, la reducción del consumo de alimentos procesados y el control de la ingesta de azúcar.",
+      "categories": [
+        {
+          "id": 1,
+          "title": "Hidratación",
+          "description": "Consejos para mejorar la ingesta de agua y mantener una hidratación adecuada.",
+          "recommendations": [
+            "Intenta beber un vaso de agua cada dos horas.",
+            "Aumenta tu consumo de agua en un vaso adicional cada día.",
+            "Asegúrate de beber agua en cada comida.",
+            "Mantén un equilibrio adecuado de electrolitos, especialmente si te ejercitas intensamente."
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Consumo de Frutas y Verduras",
+          "description": "Estrategias para aumentar la ingesta de frutas y verduras.",
+          "recommendations": [
+            "Agrega una fruta o verdura a una de tus comidas diarias.",
+            "Incluye una porción de verduras en tu comida principal del día.",
+            "Experimenta con recetas donde las frutas o verduras sean el ingrediente principal.",
+            "Explora diferentes métodos de cocción para las verduras, como asar, saltear o al vapor."
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Reducción de Alimentos Procesados",
+          "description": "Ideas para disminuir el consumo de snacks y alimentos procesados.",
+          "recommendations": [
+            "Establece un día a la semana para evitar completamente los alimentos procesados.",
+            "Empieza a cocinar más comidas en casa utilizando ingredientes frescos.",
+            "Intenta planificar tus comidas y snacks para la semana, asegurándote de incluir principalmente alimentos no procesados.",
+            "Haz de la lectura de etiquetas nutricionales un hábito para evitar alimentos con altos contenidos de conservantes y aditivos."
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Control de Azúcar",
+          "description": "Consejos para reducir el consumo de azúcar y optar por alternativas más saludables.",
+          "recommendations": [
+            "Empieza por identificar las principales fuentes de azúcar en tu dieta y reduce su consumo gradualmente.",
+            "Reduce a la mitad el azúcar que añades a bebidas como el café o té.",
+            "Incorpora más alimentos integrales en tu dieta, ya que suelen tener menor contenido de azúcares añadidos.",
+            "Prepara tus propios postres y snacks usando ingredientes con bajo contenido de azúcar."
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Sostenibilidad",
+      "description": "La sostenibilidad alimentaria aborda el impacto global de nuestras elecciones dietéticas, enfocándose en prácticas alimentarias que beneficien la salud individual, el medio ambiente y la justicia social",
+      "categories": [
+        {
+          "id": 1,
+          "title": "Nutrición",
+          "description": "Enfoca en integrar fuentes vegetales, reducir alimentos procesados y promover una dieta equilibrada para una vida más sostenible y saludable.",
+          "recommendations": [
+            "Considera diversificar tu dieta con más fuentes vegetales y opciones saludables. Pequeños cambios pueden hacer una gran diferencia para tu salud y el medio ambiente.",
+            "Continúa explorando nuevas opciones saludables en tu dieta. Puedes experimentar con recetas vegetarianas y ampliar la variedad de alimentos que consumes.",
+            "Estás en el camino correcto al priorizar fuentes vegetales y una dieta equilibrada. Sigue manteniendo esa diversidad y considera compartir tus hábitos saludables con otros.",
+            "¡Excelente elección al priorizar fuentes vegetales y una dieta equilibrada! Continúa con estos hábitos saludables y, si es posible, comparte tus conocimientos y recetas con amigos y familiares."
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Consciencia",
+          "description": "Implica investigar el origen de los alimentos, comprender el impacto global de nuestras elecciones y estar dispuestos a probar alternativas sostenibles para decisiones informadas.",
+          "recommendations": [
+            "Dedica más tiempo a investigar el origen de tus alimentos y comprende cómo tus elecciones impactan en el entorno. La consciencia alimentaria puede inspirar cambios significativos.",
+            "Sigue investigando y aprendiendo sobre tus elecciones alimenticias. Pequeños pasos pueden llevar a una mayor consciencia y decisiones más informadas.",
+            "Estás mostrando una buena consciencia alimentaria. Continúa investigando y compartiendo tus conocimientos con otros para aumentar la conciencia en tu comunidad.",
+            "¡Impresionante consciencia alimentaria! Sigue investigando y compartiendo tus conocimientos. Tu compromiso puede inspirar a otros a hacer elecciones más informadas."
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Sostenible",
+          "description": "Desde elegir productos orgánicos hasta apoyar a productores locales y reducir el consumo de plástico, busca un sistema alimentario más equitativo y respetuoso con el medio ambiente.",
+          "recommendations": [
+            "Busca maneras de incorporar prácticas más sostenibles en tu alimentación, como elegir productos locales y reducir el uso de plástico. Pequeños cambios suman.",
+            "Continúa explorando opciones sostenibles en tus elecciones alimenticias. Puedes considerar aumentar la frecuencia de prácticas como comprar localmente o elegir productos de cultivo sostenible.",
+            "Estás tomando decisiones sostenibles. Sigue apoyando prácticas como elegir productos orgánicos y locales. Tu contribución es significativa.",
+            "¡Increíble compromiso con la sostenibilidad! Sigue apoyando prácticas sostenibles y comparte tus hábitos con otros para un impacto aún mayor."
+          ]
+        }
+      ]
+    }
+  ]
+}
